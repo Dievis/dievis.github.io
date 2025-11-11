@@ -81,17 +81,17 @@ const sections = document.querySelectorAll('section[id]')
 const scrollActive = () => {
     const scrollDown = window.scrollY
 
-    sections.forEach(current =>{
+    sections.forEach(current => {
         const sectionHeight = current.offsetHeight,
               sectionTop = current.offsetTop - 58,
-              secrionId = current.getAttribute('id'),
-              sectionClass = document.querySelector('.nav_menu a[href*=' + sectionId + ']')
+              sectionId = current.getAttribute('id'),
+              sectionsClass = document.querySelector('.nav__menu a[href*=' + sectionId + ']')
 
         if(scrollDown > sectionTop && scrollDown <= sectionTop + sectionHeight) {
-            sectionClass.classList.add('active-link')
+            sectionsClass.classList.add('active-link')
         }
         else {
-            sectionClass.classList.remove('active-link')
+            sectionsClass.classList.remove('active-link')
         }
     })    
 }
